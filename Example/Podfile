@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'InputView_Example' do
+  pod 'InputView', :path => '../'
+
+  target 'InputView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
