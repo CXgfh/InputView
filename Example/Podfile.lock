@@ -1,0 +1,46 @@
+PODS:
+  - ContentSizeView (1.0.0)
+  - ExpressionManager (1.0.0):
+    - Util_V
+  - InputView (1.0.0):
+    - ContentSizeView
+    - ExpressionManager
+    - SnapKit
+    - Util_V
+  - LookinServer (1.1.7):
+    - LookinServer/Core (= 1.1.7)
+  - LookinServer/Core (1.1.7)
+  - SnapKit (5.6.0)
+  - Util_V (1.0.5)
+
+DEPENDENCIES:
+  - ContentSizeView
+  - ExpressionManager
+  - InputView (from `../`)
+  - LookinServer
+  - SnapKit
+  - Util_V
+
+SPEC REPOS:
+  trunk:
+    - ContentSizeView
+    - ExpressionManager
+    - LookinServer
+    - SnapKit
+    - Util_V
+
+EXTERNAL SOURCES:
+  InputView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ContentSizeView: 896bb73e95d6816b7b5b2777d1242173b7355c5e
+  ExpressionManager: d6451490b4d30f9cd4782bfead30785bece3cb96
+  InputView: 43df037b57e6b934e4f02db6f57362211ebb62ff
+  LookinServer: 4ce0469b066871525611d009d8d16a7a50c23491
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  Util_V: 4dc6194544ec39cfab617fedb54c213031d01d04
+
+PODFILE CHECKSUM: a5539fd0c961fb6075d7264d3c2761649c0cadae
+
+COCOAPODS: 1.12.1

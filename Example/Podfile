@@ -1,13 +1,12 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'InputView_Example' do
   pod 'InputView', :path => '../'
-
-  target 'InputView_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'ExpressionManager'
+  pod 'ContentSizeView'
+  pod 'Util_V'
+  pod 'SnapKit'
+  pod 'LookinServer'
 end
