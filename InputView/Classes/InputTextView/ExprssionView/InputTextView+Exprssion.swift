@@ -141,7 +141,7 @@ extension InputTextView {
 
 extension InputTextView: ExpressionInputViewDelegate {
     public func send() {
-        delegate?.send?(textView.expressionRealString)
+        delegate?.inputTextViewSend?(textView.expressionRealString, at: self)
         textView.expressionAttributed = NSMutableAttributedString()
         count = 0
     }

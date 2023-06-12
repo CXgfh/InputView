@@ -140,7 +140,7 @@ extension InputTextView {
             let poiont = sender.location(in: superview)
             voiceManager.stopCapture{ url in
                 if self.voiceContorlView.needSend(at: poiont) {
-                    self.delegate?.sendVoice?(url)
+                    self.delegate?.inputTextViewSendVoice?(url, at: self)
                 } else {
                     url.removeFile()
                 }

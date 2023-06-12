@@ -44,12 +44,12 @@ extension InputTextView: UITextViewDelegate {
     }
     
     public func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        delegate?.textViewShouldBeginEditing?()
+        delegate?.inputTextViewShouldBeginEditing?(at: self)
         return true
     }
     
     public func textViewDidEndEditing(_ textView: UITextView) {
-        delegate?.textViewDidEndEditing?()
+        delegate?.inputTextViewDidEndEditing?(at: self)
     }
     
     public func textViewDidChange(_ textView: UITextView) {
@@ -67,7 +67,7 @@ extension InputTextView: UITextViewDelegate {
             count = text.length
         }
         
-        delegate?.textChanged?()
+        delegate?.inputTextViewChanged?(at: self)
     }
 
     public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -75,10 +75,10 @@ extension InputTextView: UITextViewDelegate {
             text == "\n" {
             if textView.text.count > 0 {
                 if needLoadExpression {
-                    delegate?.send?(textView.expressionRealString)
+                    delegate?.inputTextViewSend?(textView.expressionRealString, at: self)
                     textView.expressionAttributed = NSMutableAttributedString()
                 } else {
-                    delegate?.send?(textView.text)
+                    delegate?.inputTextViewSend?(textView.text, at: self)
                     textView.text = ""
                 }
                 count = 0
